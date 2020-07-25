@@ -2,7 +2,9 @@
 
 A Python script that takes an image and outputs a pixelated version using [Voronoi tessellations](https://en.wikipedia.org/wiki/Voronoi_diagram).
 
-The script loads the image, places `n_points` random points in the image and uses them as the seeds in a Voronoi tessellation. Right now the script is somewhat slow, because I went with the overkill of computing the shortest distance of each pixel to the seeds using a [KDTree](https://en.wikipedia.org/wiki/K-d_tree#Nearest_neighbour_search).
+The script loads the image, places `n_points` random points in the image and uses them as the seeds in a Voronoi tessellation. Then, region of the tessellation gets covered by the average color in it.
+
+Right now the script is somewhat slow, because I went with the overkill of computing the shortest distance of each pixel to the seeds using a [KDTree](https://en.wikipedia.org/wiki/K-d_tree#Nearest_neighbour_search).
 
 ## Usage
 
