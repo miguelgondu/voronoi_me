@@ -1,7 +1,7 @@
 import click
 import numpy as np
 from PIL import Image
-from scipy.spatial import KDTree, Voronoi
+from scipy.spatial import cKDTree, Voronoi
 from itertools import product
 from codetiming import Timer
 
