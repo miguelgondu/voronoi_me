@@ -1,7 +1,7 @@
 import click
 import numpy as np
 from PIL import Image
-from scipy.spatial import KDTree, Voronoi
+from scipy.spatial import cKDTree, Voronoi
 from itertools import product
 
 def compute_mean_color(img, region):
@@ -28,7 +28,7 @@ def process(img_path, out, n_points):
     
     # Creating the kdtree
     vor = Voronoi(points)
-    kdtree = KDTree(vor.points)
+    kdtree = cKDTree(vor.points)
 
     # Identifying regions pixel by pixel
     region_array = - np.ones(img.shape[:2])
