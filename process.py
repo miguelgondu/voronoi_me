@@ -33,7 +33,7 @@ def process(img_path, out, n_points):
     # Creating the kdtree
     with Timer(text="Creating the kdtree: {:.6f} seconds"):
         vor = Voronoi(points)
-        kdtree = KDTree(vor.points)
+        kdtree = cKDTree(vor.points)
 
     # Identifying regions pixel by pixel
     with Timer(text="Computing positions: {:.6f} seconds"):

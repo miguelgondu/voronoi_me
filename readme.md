@@ -32,5 +32,5 @@ python process.py example.jpg --out="example_50.jpg" --n_points=50
 
 ![Image before processing](example.jpg "A nice photo of Manizales")
 
-![Image after processing](out.jpg "A nice photo of Manizales, but pixelated")
+![Image after processing](out.jpg "A nice photo of Manizales, but low-poly")
 
